@@ -12,7 +12,7 @@
 ### Создание таблиц
 
 - Ознакомиться с данными в папке `north_data`
-- Создать три таблицы, используя `query tool` в pgAdmin
+- Создать три таблицы, используя `query tool` в pgAdmin 
     - `employees`
     - `customers`
     - `orders`
