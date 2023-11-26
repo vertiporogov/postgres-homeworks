@@ -1,4 +1,3 @@
--- SQL-команды для создания таблиц
 CREATE TABLE employees
 (
 	employee_id int PRIMARY KEY,
@@ -24,3 +23,5 @@ CREATE TABLE orders
 	order_date date NOT NULL,
 	ship_city varchar(30) NOT NULL
 );
+
+SELECT * FROM employees
