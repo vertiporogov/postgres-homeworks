@@ -9,6 +9,12 @@ ALTER TABLE products ADD CONSTRAINT chk_products_discontinued CHECK(discontinued
 
 -- 3. Создать новую таблицу, содержащую все продукты, снятые с продажи (discontinued = 1)
 
+UPDATE products SET discontinued = 1
+
 
 -- 4. Удалить из products товары, снятые с продажи (discontinued = 1)
 -- Для 4-го пункта может потребоваться удаление ограничения, связанного с foreign_key. Подумайте, как это можно решить, чтобы связь с таблицей order_details все же осталась.
+
+ALTER TABLE order_details DROP CONSTRAINT fk_order_details_products
+
+DELETE FROM products WHERE discontinued = 1

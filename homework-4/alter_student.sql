@@ -17,7 +17,6 @@ ALTER TABLE student ADD COLUMN middle_name varchar
 
 ALTER TABLE student DROP COLUMN middle_name
 
-
 -- 4. Переименовать колонку birthday в birth_date
 
 ALTER TABLE student RENAME birthday TO birthday_date
@@ -26,8 +25,10 @@ ALTER TABLE student RENAME birthday TO birthday_date
 
 ALTER TABLE student ALTER COLUMN phone SET DATA TYPE varchar(32)
 
-
 -- 6. Вставить три любых записи с автогенерацией идентификатора
 
+INSERT INTO student VALUES (1, 'FF', 'SD', '1980.01.17', '2763265'), (2, 'FFGGD', 'SDDDG', '1980.01.13', '27632DGDG65'), (3, 'FFFFFF', 'SFFFD', '1980.01.14', '2763DDD265')
 
 -- 7. Удалить все данные из таблицы со сбросом идентификатор в исходное состояние
+
+TRUNCATE TABLE student RESTART IDENTITY
